@@ -2,7 +2,8 @@
     "name": "BloxPro",
     "description": "Inspire by RoPro, it's like RoPro but better! It has more features, good ui and works on slow pc's!",
     "version": "1.02",
-
+    "manifest_version": 2,
+    
     "browser_action" : {
         "default_icon": "assets/roblox.png"
     },
