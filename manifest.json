@@ -1,7 +1,7 @@
 {
-    "name": "SandBox Roblox Avatar",
-    "description": "Try every style you want without buying. It won't show in real games though.",
-    "version": "3.1.7",
+    "name": "BloxPro",
+    "description": "Inspire by RoPro, it's like RoPro but better! It has more features, good ui and works on slow pc's!",
+    "version": "1.02",
     "manifest_version": 2,
 
     "browser_action" : {
