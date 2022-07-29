@@ -7,7 +7,8 @@
 
 # How to
 
-- Download the zip
+- Click code
+- Download as zip
 - Extract the zip
 - Turn on developer mode on google, microsoft, opera, etc
 - click unpack load unpacked
