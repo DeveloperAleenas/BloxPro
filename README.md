@@ -14,11 +14,9 @@
 - Go to 3 dots top right, more tools, extensions.
 - Turn on developer mode on google, microsoft, opera, etc
 - click unpack load unpacked
-- Go into the folder you will find a file named
-- Select the file
+- Go into the folder you will find a file named BloxPro-main
+- Drag into the extensions
 - And your done!
-- Go to your roblox avatar
-- And pick anything you want on
+- Go to Bloxflip and turn on!
 
-> We do not condone with RoPro.
-> We are inspired.
+
